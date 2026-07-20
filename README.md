@@ -1,2 +1,2 @@
 # Notes
-We can create , edit, delete oue notes
+We can create , edit, delete our notes
