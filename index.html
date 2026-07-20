@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Notes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>My Notes</h1>
+
+<a href="/add">Add Note</a>
+
+<hr>
+
+
+{% for note in notes %}
+
+<div class="note">
+
+    <h2>{{ note.title }}</h2>
+
+    <p>{{ note.description }}</p>
+
+    <a href="/edit/{{ note.id }}">Edit</a>
+
+    |
+
+    <a href="/delete/{{ note.id }}">Delete</a>
+
+</div>
+
+<hr>
+
+
+{% else %}
+
+<p>No notes available.</p>
+
+
+{% endfor %}
+
+
+</body>
+
+</html>
